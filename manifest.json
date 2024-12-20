@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Soundboard.com Downloader",
+    "version": "1.0.0",
+    "description": "Download soundboard.com tracks as a Wav file.",
+    "permissions": [
+      "downloads",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "https://www.soundboard.com/*"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.soundboard.com/*"],
+        "js": ["main.js"]
+      }
+    ]
+  }
+  
